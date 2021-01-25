@@ -1,0 +1,32 @@
+.Descriptor {
+  max-width: 672px;
+
+  &__title {
+    font: var(--font-xl-bold);
+    margin-bottom: var(--gap-6x);
+  }
+
+  &__subtitle {
+    margin-bottom: var(--gap-4x);
+  }
+
+  &__list {
+    list-style-position: inside;
+    margin-bottom: var(--gap);
+  }
+
+  &__example {
+    padding: var(--gap) 0;
+    margin: var(--gap) 0 var(--gap-4x);
+    display: flex;
+    justify-content: space-between;
+    border-top: solid var(--color-coffee-primary) 1px;
+    border-bottom: solid var(--color-coffee-primary) 1px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 256px);
+    grid-gap: var(--gap-2x);
+  }
+}

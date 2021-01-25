@@ -1,0 +1,56 @@
+.BuySell {
+  &__title {
+    font: var(--font-xl-bold);
+    margin-bottom: var(--gap-3x);
+  }
+
+  &__converter {
+    margin-bottom: var(--gap-4x);
+  }
+
+  &__content {
+    max-width: 672px;
+  }
+
+  &__card-select, &__new-card {
+    margin-bottom: var(--gap-2x);
+  }
+
+  &__info {
+    margin-bottom: var(--gap-4x);
+  }
+
+  &__table {
+    margin-bottom: var(--gap-4x);
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
+    & > * {
+      display: contents;
+
+      & > * {
+        padding: 12px 0;
+        border-bottom: solid var(--color-black-disabled) 1px;
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+
+      &:first-of-type {
+        & > * {
+          border-top: solid var(--color-black-disabled) 1px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 256px;
+    text-transform: capitalize;
+
+    @include media('<=tablet') {
+      width: 100%;
+    }
+  }
+}

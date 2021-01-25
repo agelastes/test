@@ -1,0 +1,18 @@
+.CardSelect {
+  display: grid;
+  grid-gap: var(--gap-2x);
+
+  &_operationType {
+    &_buy {
+      grid-template-columns: 1fr 120px;
+
+      @include media('<=mobile') {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &_sell {
+      grid-template-columns: 1fr;
+    }
+  }
+}

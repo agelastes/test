@@ -1,0 +1,10 @@
+.Deposit {
+  display: grid;
+  grid-gap: var(--gap-2x);
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: var(--gap);
+  }
+}

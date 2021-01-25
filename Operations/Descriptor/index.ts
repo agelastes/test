@@ -1,0 +1,1 @@
+export { Descriptor } from './Descriptor';
