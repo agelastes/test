@@ -1,0 +1,54 @@
+.Transfer {
+  &__title {
+    font: var(--font-xl-bold);
+    margin-bottom: var(--gap-3x);
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    & > * {
+      display: contents;
+
+      & > * {
+        padding: var(--gap) 0;
+        border-bottom: solid var(--color-black-disabled) 1px;
+
+        &:nth-child(2n) {
+          padding-left: var(--gap-4x);
+        }
+      }
+
+      &:first-child {
+        & > * {
+          border-top: solid var(--color-black-disabled) 1px;
+        }
+      }
+    }
+  }
+
+  &__qr-block {
+    display: grid;
+    grid-template-columns: minmax(222px, min-content) 1fr;
+    grid-gap: var(--gap-3x);
+    max-width: 672px;
+    margin: var(--gap-3x) 0 var(--gap-2x);
+
+    @include media('<=tablet') {
+      grid-template-columns: auto;
+      grid-template-rows: auto minmax(222px, auto);
+      grid-gap: var(--gap);
+    }
+  }
+
+  &__qr-code {
+    width: 222px;
+    height: 222px;
+    border: solid var(--color-white) 1px;
+
+    @include media('<=tablet') {
+      grid-row: 2;
+    }
+  }
+}

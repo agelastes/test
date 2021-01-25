@@ -1,0 +1,5 @@
+.Verify3DS {
+  @include media('<=mobile') {
+    margin: 0 calc(var(--space-content-x) * -1);
+  }
+}

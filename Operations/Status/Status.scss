@@ -1,0 +1,54 @@
+.Status {
+  max-width: 672px;
+
+  &__title {
+    font: var(--font-xl-bold);
+    color: var(--color-red-primary);
+    margin-bottom: var(--gap-3x);
+
+    &_status {
+      &_pending {
+        color: var(--color-black-secondary);
+      }
+
+      &_paid, &_succeeded {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: var(--gap-3x);
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    & > * {
+      display: contents;
+
+      & > * {
+        padding: var(--gap) 0;
+        border-bottom: solid var(--color-black-disabled) 1px;
+
+        &:nth-child(2n) {
+          padding-left: var(--gap-4x);
+        }
+      }
+
+      &:first-child {
+        & > * {
+          border-top: solid var(--color-black-disabled) 1px;
+        }
+      }
+    }
+  }
+
+  &__loader {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
